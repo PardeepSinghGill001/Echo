@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+buzzing
+{% endblock %}
+
+{% block content %}
+<h1 class="text-white text-center mt-4">Buzzdel</h1>
+<h2>Are you sure you want to delete this Buzz ?</h2>
+<form method="post">
+    {%csrf_token%}
+    <a class="btn btn-success" href="{% url 'buzz_list' %}">Cancel</a>
+    <button class="btn btn-danger">delete</button>
+</form>
+{% endblock %}

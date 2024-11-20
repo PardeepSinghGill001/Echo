@@ -1,0 +1,32 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment directory
+.venv/
+.env/
+
+# Database files (optional, if using SQLite locally)
+db.sqlite3
+db.sqlite3-journal
+
+# Django secret settings
+.env
+secrets.json
+
+# Static and media files
+/static/
+/media/
+
+# IDE and editor configurations
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Byte-compiled C extensions
+*.so

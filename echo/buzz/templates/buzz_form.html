@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+buzzing
+{% endblock %}
+
+{% block content %}
+<h1 class="text-white text-center mt-4">Buzzed-it</h1>
+<h2>
+    {% if form.instance.pk %}
+    Edit Buzz
+    {% else %}
+    Create Buzz 
+    {% endif %} 
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-warning" type="Submit">Submit</button>
+    </form>
+    <a href="{% url 'buzz_list'%}">Back to Buzz Feed</a>
+</h2>
+{% endblock %}

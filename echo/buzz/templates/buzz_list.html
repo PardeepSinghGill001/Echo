@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}
+buzzing
+{% endblock %}
+
+{% block content %}
+<h1 class="text-white text-center mt-4"> Buzz Feed </h1>
+<a class="btn btn-primary mb-4" href="{% url 'buzz_create' %}">Make a Buzzz</a>
+<div class="container row gap-3">
+    {% for buzz in buzzes %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{buzz.photo.url}}" class="card-img-top p-2 mt-2" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{buzz.user.username}}</h5>
+          <p class="card-text">{{buzz.text}}</p>
+          {% if buzz.user == user %}
+          <a href="{% url 'buzz_edit' buzz.id %}" class="btn btn-primary">Edit</a>
+          <a href="{% url 'buzz_delete' buzz.id %}" class="btn btn-danger">Delete</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}
