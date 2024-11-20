@@ -6,5 +6,9 @@ Echo is a Django-based web application inspired by social media, where users can
 - Image upload with captions/descriptions
 - User profile management
 
+##Installation
+
+###1. Clone the repository
+git clone https://github.com/PardeepSinghGill001/Echo.git
 
 
